@@ -1,44 +1,42 @@
-00:16:54.433 INFO [main] org.lenskit.cli.Main: Starting LensKit 3.0-M1 on Java 1.8.0_362 from Temurin
-00:16:54.459 DEBUG [main] org.lenskit.LenskitInfo: have 5573 active revisions
-00:16:54.466 DEBUG [main] org.lenskit.cli.Main: Built from Git revision c0210fa3281ef8b15b0959bcd5fced43c5fec38a
-00:16:54.466 DEBUG [main] org.lenskit.cli.Main: Using VM 'OpenJDK 64-Bit Server VM' version 25.362-b09 from Temurin
-00:16:54.466 INFO [main] org.lenskit.cli.Main: Have 4 processors and heap limit of 3634 MiB
-00:16:54.484 INFO [main] org.lenskit.cli.util.RecommenderLoader: creating fresh recommender
-00:16:54.707 INFO [main] org.lenskit.config.ConfigurationLoader: loading script from file:/F:/uu-assignment/etc/user-user.groovy
-00:16:55.187 DEBUG [main] org.lenskit.data.dao.file.TextEntitySource: loading source ratings with base URI file:/F:/uu-assignment/data/movielens.yml
-00:16:55.187 DEBUG [main] org.lenskit.data.dao.file.TextEntitySource: resolved file URI: file:/F:/uu-assignment/data/ratings.csv
-00:16:55.195 INFO [main] org.lenskit.data.dao.file.TextEntitySource: loading text file source ratings to read from file:/F:/uu-assignment/data/ratings.csv
-00:16:55.201 DEBUG [main] org.lenskit.data.dao.file.TextEntitySource: ratings: using delimiter ,
-00:16:55.201 DEBUG [main] org.lenskit.data.dao.file.TextEntitySource: ratings: reading header
-00:16:55.201 DEBUG [main] org.lenskit.data.dao.file.TextEntitySource: ratings: reading entities of type EntityType[rating]
-00:16:55.236 DEBUG [main] org.lenskit.data.dao.file.TextEntitySource: class org.lenskit.data.ratings.RatingBuilder: using entity builder {}
-00:16:55.236 DEBUG [main] org.lenskit.data.dao.file.TextEntitySource: loading source movies with base URI file:/F:/uu-assignment/data/movielens.yml
-00:16:55.236 DEBUG [main] org.lenskit.data.dao.file.TextEntitySource: resolved file URI: file:/F:/uu-assignment/data/movies.csv
-00:16:55.236 INFO [main] org.lenskit.data.dao.file.TextEntitySource: loading text file source movies to read from file:/F:/uu-assignment/data/movies.csv
-00:16:55.236 DEBUG [main] org.lenskit.data.dao.file.TextEntitySource: movies: using delimiter ,
-00:16:55.236 DEBUG [main] org.lenskit.data.dao.file.TextEntitySource: movies: reading header
-00:16:55.237 DEBUG [main] org.lenskit.data.dao.file.TextEntitySource: movies: reading entities of type EntityType[item]
-00:16:55.237 DEBUG [main] org.lenskit.data.dao.file.TextEntitySource: class org.lenskit.data.entities.BasicEntityBuilder: using entity builder {}
-00:16:55.237 DEBUG [main] org.lenskit.data.dao.file.TextEntitySource: loading source tags with base URI file:/F:/uu-assignment/data/movielens.yml
-00:16:55.237 DEBUG [main] org.lenskit.data.dao.file.TextEntitySource: resolved file URI: file:/F:/uu-assignment/data/tags.csv
-00:16:55.237 INFO [main] org.lenskit.data.dao.file.TextEntitySource: loading text file source tags to read from file:/F:/uu-assignment/data/tags.csv
-00:16:55.237 DEBUG [main] org.lenskit.data.dao.file.TextEntitySource: tags: using delimiter ,
-00:16:55.237 DEBUG [main] org.lenskit.data.dao.file.TextEntitySource: tags: reading header
-00:16:55.237 DEBUG [main] org.lenskit.data.dao.file.TextEntitySource: tags: reading entities of type EntityType[item-tag]
-00:16:55.237 DEBUG [main] org.lenskit.data.dao.file.TextEntitySource: class org.lenskit.data.entities.BasicEntityBuilder: using entity builder {}
-00:16:55.243 DEBUG [main] org.lenskit.LenskitRecommenderEngineBuilder: building graph from 3 configurations
-00:16:55.291 DEBUG [main] org.lenskit.inject.RecommenderInstantiator: replacing nodes in graph with 12 nodes
-00:16:55.298 DEBUG [main] org.lenskit.inject.RecommenderInstantiator: found 3 shared nodes
-00:16:55.298 DEBUG [main] org.lenskit.inject.RecommenderInstantiator: final graph has 12 nodes
-00:16:55.300 INFO [main] org.lenskit.cli.util.RecommenderLoader: built recommender in 56.45 ms
-00:16:56.000 INFO [main] org.lenskit.data.dao.file.StaticDataSource: deriving entity type EntityType[user] from EntityType[rating] (column TypedName[user: long])
-00:16:56.063 INFO [main] org.lenskit.data.dao.file.StaticDataSource: deriving entity type EntityType[item] from EntityType[rating] (column TypedName[item: long])
-00:16:56.367 DEBUG [main] org.lenskit.data.entities.EntityCollectionBuilder: built collection of 2500 entities with type EntityType[item] and 2 indexes
-00:16:56.384 DEBUG [main] org.lenskit.data.entities.EntityCollectionBuilder: built collection of 264505 entities with type EntityType[rating] and 2 indexes
-00:16:56.390 DEBUG [main] org.lenskit.data.entities.EntityCollectionBuilder: built collection of 94875 entities with type EntityType[item-tag] and 2 indexes
-00:16:56.391 DEBUG [main] org.lenskit.data.entities.EntityCollectionBuilder: built collection of 862 entities with type EntityType[user] and 2 indexes
-00:16:56.397 INFO [main] org.lenskit.cli.commands.Recommend: recommending for 1 users
-00:16:56.413 DEBUG [main] org.lenskit.basic.TopNItemRecommender: computing effective candidates for user 320 from 2500 candidates and 62 excluded items
-00:16:56.416 DEBUG [main] org.lenskit.basic.TopNItemRecommender: Computing 10 recommendations for user 320 from 2438 candidates
-00:16:56.651 INFO [main] org.lenskit.cli.commands.Recommend: recommended for 1 users in 254.3 ms
-00:16:56.651 INFO [main] org.lenskit.cli.Main: If you use LensKit in published research, please see http://lenskit.org/research/
+19:10:54.187 INFO [main] org.lenskit.cli.Main: Starting LensKit 3.0-M1 on Java 1.8.0_362 from Amazon.com Inc.
+19:10:54.204 DEBUG [main] org.lenskit.LenskitInfo: have 5573 active revisions
+19:10:54.208 DEBUG [main] org.lenskit.cli.Main: Built from Git revision c0210fa3281ef8b15b0959bcd5fced43c5fec38a
+19:10:54.208 DEBUG [main] org.lenskit.cli.Main: Using VM 'OpenJDK 64-Bit Server VM' version 25.362-b08 from Amazon.com Inc.
+19:10:54.208 INFO [main] org.lenskit.cli.Main: Have 12 processors and heap limit of 3641 MiB
+19:10:54.217 INFO [main] org.lenskit.cli.util.RecommenderLoader: creating fresh recommender
+19:10:54.406 INFO [main] org.lenskit.config.ConfigurationLoader: loading script from file:/Users/vuminhle/recommender-java/uu-assignment/etc/user-user.groovy
+19:10:54.800 DEBUG [main] org.lenskit.data.dao.file.TextEntitySource: loading source ratings with base URI file:/Users/vuminhle/recommender-java/uu-assignment/data/movielens.yml
+19:10:54.800 DEBUG [main] org.lenskit.data.dao.file.TextEntitySource: resolved file URI: file:/Users/vuminhle/recommender-java/uu-assignment/data/ratings.csv
+19:10:54.809 INFO [main] org.lenskit.data.dao.file.TextEntitySource: loading text file source ratings to read from file:/Users/vuminhle/recommender-java/uu-assignment/data/ratings.csv
+19:10:54.813 DEBUG [main] org.lenskit.data.dao.file.TextEntitySource: ratings: using delimiter ,
+19:10:54.813 DEBUG [main] org.lenskit.data.dao.file.TextEntitySource: ratings: reading header
+19:10:54.814 DEBUG [main] org.lenskit.data.dao.file.TextEntitySource: ratings: reading entities of type EntityType[rating]
+19:10:54.847 DEBUG [main] org.lenskit.data.dao.file.TextEntitySource: class org.lenskit.data.ratings.RatingBuilder: using entity builder {}
+19:10:54.848 DEBUG [main] org.lenskit.data.dao.file.TextEntitySource: loading source movies with base URI file:/Users/vuminhle/recommender-java/uu-assignment/data/movielens.yml
+19:10:54.848 DEBUG [main] org.lenskit.data.dao.file.TextEntitySource: resolved file URI: file:/Users/vuminhle/recommender-java/uu-assignment/data/movies.csv
+19:10:54.848 INFO [main] org.lenskit.data.dao.file.TextEntitySource: loading text file source movies to read from file:/Users/vuminhle/recommender-java/uu-assignment/data/movies.csv
+19:10:54.848 DEBUG [main] org.lenskit.data.dao.file.TextEntitySource: movies: using delimiter ,
+19:10:54.848 DEBUG [main] org.lenskit.data.dao.file.TextEntitySource: movies: reading header
+19:10:54.848 DEBUG [main] org.lenskit.data.dao.file.TextEntitySource: movies: reading entities of type EntityType[item]
+19:10:54.848 DEBUG [main] org.lenskit.data.dao.file.TextEntitySource: class org.lenskit.data.entities.BasicEntityBuilder: using entity builder {}
+19:10:54.848 DEBUG [main] org.lenskit.data.dao.file.TextEntitySource: loading source tags with base URI file:/Users/vuminhle/recommender-java/uu-assignment/data/movielens.yml
+19:10:54.848 DEBUG [main] org.lenskit.data.dao.file.TextEntitySource: resolved file URI: file:/Users/vuminhle/recommender-java/uu-assignment/data/tags.csv
+19:10:54.848 INFO [main] org.lenskit.data.dao.file.TextEntitySource: loading text file source tags to read from file:/Users/vuminhle/recommender-java/uu-assignment/data/tags.csv
+19:10:54.848 DEBUG [main] org.lenskit.data.dao.file.TextEntitySource: tags: using delimiter ,
+19:10:54.848 DEBUG [main] org.lenskit.data.dao.file.TextEntitySource: tags: reading header
+19:10:54.848 DEBUG [main] org.lenskit.data.dao.file.TextEntitySource: tags: reading entities of type EntityType[item-tag]
+19:10:54.849 DEBUG [main] org.lenskit.data.dao.file.TextEntitySource: class org.lenskit.data.entities.BasicEntityBuilder: using entity builder {}
+19:10:54.853 DEBUG [main] org.lenskit.LenskitRecommenderEngineBuilder: building graph from 3 configurations
+19:10:54.900 DEBUG [main] org.lenskit.inject.RecommenderInstantiator: replacing nodes in graph with 12 nodes
+19:10:54.904 DEBUG [main] org.lenskit.inject.RecommenderInstantiator: found 3 shared nodes
+19:10:54.904 DEBUG [main] org.lenskit.inject.RecommenderInstantiator: final graph has 12 nodes
+19:10:54.905 INFO [main] org.lenskit.cli.util.RecommenderLoader: built recommender in 51.99 ms
+19:10:55.822 INFO [main] org.lenskit.data.dao.file.StaticDataSource: deriving entity type EntityType[user] from EntityType[rating] (column TypedName[user: long])
+19:10:55.900 INFO [main] org.lenskit.data.dao.file.StaticDataSource: deriving entity type EntityType[item] from EntityType[rating] (column TypedName[item: long])
+19:10:55.924 DEBUG [main] org.lenskit.data.entities.EntityCollectionBuilder: built collection of 2500 entities with type EntityType[item] and 2 indexes
+19:10:55.945 DEBUG [main] org.lenskit.data.entities.EntityCollectionBuilder: built collection of 264505 entities with type EntityType[rating] and 2 indexes
+19:10:55.956 DEBUG [main] org.lenskit.data.entities.EntityCollectionBuilder: built collection of 94875 entities with type EntityType[item-tag] and 2 indexes
+19:10:55.956 DEBUG [main] org.lenskit.data.entities.EntityCollectionBuilder: built collection of 862 entities with type EntityType[user] and 2 indexes
+19:10:55.963 INFO [main] org.lenskit.cli.commands.Recommend: recommending for 1 users
+19:10:55.973 DEBUG [main] org.lenskit.basic.TopNItemRecommender: computing effective candidates for user 320 from 2500 candidates and 62 excluded items
+19:10:55.976 DEBUG [main] org.lenskit.basic.TopNItemRecommender: Computing 10 recommendations for user 320 from 2438 candidates

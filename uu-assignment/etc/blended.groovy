@@ -13,4 +13,4 @@ bind ItemRecommender to RankBlendingItemRecommender
 within (RankBlendingItemRecommender.Right, ItemRecommender) {
     bind ItemScorer to PopularityRankItemScorer
 }
-set BlendWeight to 0.9
+set BlendWeight to 1

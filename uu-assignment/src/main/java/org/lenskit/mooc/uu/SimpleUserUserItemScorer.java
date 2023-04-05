@@ -108,17 +108,26 @@ public class SimpleUserUserItemScorer extends AbstractItemScorer {
                         break;
                     }
                     i++;
-                    numerator += V.get(e.getKey()).get(item) * e.getValue();
+                    Double r = V.get(e.getKey()).get(item);
+                    numerator += r * e.getValue();
                     denomoniator += e.getValue();
                 }
             }
             if (denomoniator == 0.0 || i < 2) {
                 results.add(Results.create(item, 0.0));
             } else {
-                Double score = Vectors.mean(userRatings) + numerator / denomoniator;
+                Double avg = Vectors.mean(userRatings);
+                Double score = avg + numerator / denomoniator;
                 results.add(Results.create(item, score));
             }
         }
+
+        Collections.sort(results, new Comparator<Result>() {
+            @Override
+            public int compare(Result o1, Result o2) {
+                return new Double(o2.getScore()).compareTo(new Double(o1.getScore()));
+            }
+        });
         return Results.newResultMap(results);
     }
 

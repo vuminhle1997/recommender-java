@@ -87,6 +87,13 @@ public class SimpleItemItemScorer extends AbstractItemScorer {
             }
         }
 
+        Collections.sort(results, new Comparator<Result>() {
+            @Override
+            public int compare(Result o1, Result o2) {
+                return new Double(o2.getScore()).compareTo(new Double(o1.getScore()));
+            }
+        });
+
         return Results.newResultMap(results);
 
     }

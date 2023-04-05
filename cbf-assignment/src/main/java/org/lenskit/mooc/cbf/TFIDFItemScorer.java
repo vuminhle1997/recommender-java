@@ -10,11 +10,7 @@ import org.lenskit.results.Results;
 
 import javax.annotation.Nonnull;
 import javax.inject.Inject;
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
+import java.util.*;
 import java.util.Map.Entry;
 
 /**
@@ -70,6 +66,9 @@ public class TFIDFItemScorer extends AbstractItemScorer {
         Map<String, Double> userVector = profileBuilder.makeUserProfile(ratings);
 
         for (Long item : items) {
+            if (item == 1) {
+                int i = 0;
+            }
             Map<String, Double> iv = model.getItemVector(item);
 
             // TODO Compute the cosine of this item and the user's profile, store it in the
@@ -94,9 +93,20 @@ public class TFIDFItemScorer extends AbstractItemScorer {
 
             Double denominator = Math.sqrt(piSqrSum) * Math.sqrt(qiSqrSum);
             if (denominator > 0) {
-                results.add(Results.create(item, numerator / denominator));
+                Double score = numerator / denominator;
+                results.add(Results.create(item, score));
             }
         }
+
+        Result fightClub = results.stream().filter(r -> r.getId() == 2959).findAny().orElse(null);
+        Result toyStory = results.stream().filter(r -> r.getId() == 1).findAny().orElse(null);
+
+        Collections.sort(results, new Comparator<Result>() {
+            @Override
+            public int compare(Result o1, Result o2) {
+                return new Double(o2.getScore()).compareTo(new Double(o1.getScore()));
+            }
+        });
 
         return Results.newResultMap(results);
     }

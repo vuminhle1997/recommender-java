@@ -93,8 +93,13 @@ public class TFIDFModelProvider implements Provider<TFIDFModel> {
         // Invert and log the document frequency. We can do this in-place.
         final double logN = Math.log(items.size());
         for (Map.Entry<String, Double> e : docFreq.entrySet()) {
+            if (e.getKey().equals("children")) {
+                System.out.println("2");
+            }
             e.setValue(logN - Math.log(e.getValue()));
         }
+
+        Double childrenVal = docFreq.get("children");
 
         // Now docFreq is a log-IDF vector. Its values can therefore be multiplied by TF
         // values.
@@ -111,6 +116,9 @@ public class TFIDFModelProvider implements Provider<TFIDFModel> {
             // square root of the sum of the squares of the values.
             Double sum = 0.0;
             for (Map.Entry<String, Double> e : tv.entrySet()) {
+                if (e.getKey().equals("children")) {
+                    int i = 0;
+                }
                 Double val = e.getValue() * docFreq.get(e.getKey());
                 sum += val * val;
                 e.setValue(val);
@@ -122,6 +130,9 @@ public class TFIDFModelProvider implements Provider<TFIDFModel> {
             }
             modelData.put(entry.getKey(), tv);
         }
+
+        double scoreChildren = docFreq.get("children");
+        Map<String, Double> toyStore = modelData.get(1);
 
         // We don't need the IDF vector anymore, as long as as we have no new tags
         return new TFIDFModel(modelData);
